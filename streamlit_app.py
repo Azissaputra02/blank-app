@@ -3,7 +3,7 @@ import pandas as pd
 import altair as alt
 
 st.title("Deposito Simulation")
-st.subheader("This website will simulate how your money grows in a year if you invest in time deposits, compared to a savings account, which typically decreases your time value of money.")
+st.write("This website will simulate how your money grows in a year if you invest in time deposits, compared to a savings account, which typically decreases your time value of money.")
 
 # Input
 principal = st.number_input("Input your money (Rp)", min_value=0, step=1_000_000, format="%d")
