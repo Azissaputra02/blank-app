@@ -18,20 +18,34 @@ st.markdown("""
         margin-bottom: 30px;
     }
 
-    /* Label style for inputs */
-    .stTextInput>label {
-        color: white;
+    /* Input label in white */
+    label {
+        color: white !important;
         font-weight: bold;
         font-size: 18px;
     }
 
-    /* Set background color to black */
+    /* Input box text white and border white */
+    div[data-baseweb="input"] > input {
+        background-color: #000000 !important;
+        color: white !important;
+        border: 1px solid white !important;
+    }
+
+    /* Input box focused state border white */
+    div[data-baseweb="input"] > input:focus {
+        border-color: white !important;
+        outline: none !important;
+        box-shadow: 0 0 0 1px white !important;
+    }
+
+    /* Set app background to black */
     .stApp {
         background-color: #000000;
         padding: 30px;
     }
 
-    /* Saving interest text */
+    /* Saving interest text white */
     .saving-interest {
         color: white;
         font-size: 16px;
@@ -49,8 +63,8 @@ This website will simulate how your money grows in a year if you invest in time 
 """
 st.markdown(f'<p class="subheader-text">{subheader_text}</p>', unsafe_allow_html=True)
 
-# Input for deposit amount
+# Input money
 principal = st.number_input("Input your money (Rp)", min_value=100000, step=100000, format="%d")
 
-# Show default saving account interest rate below input
+# Show saving interest rate below
 st.markdown('<p class="saving-interest">Default Saving Account Interest Rate: 0.25% p.a.</p>', unsafe_allow_html=True)
