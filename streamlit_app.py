@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
-import streamlit as st
-
 st.markdown("""
     <style>
     /* Gradient text for header */
