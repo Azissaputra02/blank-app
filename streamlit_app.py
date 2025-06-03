@@ -1,6 +1,5 @@
 import streamlit as st
 
-# Hide default Streamlit menu and footer for cleaner look (optional)
 st.markdown("""
     <style>
     /* Gradient text for header */
@@ -19,18 +18,16 @@ st.markdown("""
         margin-bottom: 30px;
     }
 
-    /* Set background color to dark so white text is visible */
+    /* Set background color to black */
     .stApp {
-        background-color: #0a2540;
+        background-color: #000000;
         padding: 30px;
     }
     </style>
 """, unsafe_allow_html=True)
 
-# Header with gradient text
 st.markdown('<h1 class="gradient-text">Deposito Simulation</h1>', unsafe_allow_html=True)
 
-# Subheader with white text and your explanation
 subheader_text = """
 This website will simulate how your money grows in a year if you invest in time deposits, compared to a savings account, which typically decreases your time value of money.
 """
