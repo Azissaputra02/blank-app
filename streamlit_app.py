@@ -1,70 +1,35 @@
 import streamlit as st
+import pandas as pd
 
-st.markdown("""
-    <style>
-    /* Gradient text for header */
-    .gradient-text {
-        font-size: 48px;
-        font-weight: bold;
-        background: linear-gradient(90deg, green, blue);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+# UI: Title and explanation
+st.title("Deposito Simulation")
+st.subheader("This website will simulate how your money grows in a year if you invest in time deposits, compared to a savings account, which typically decreases your time value of money.")
 
-    /* White colored subheader text */
-    .subheader-text {
-        color: white;
-        font-size: 20px;
-        margin-bottom: 30px;
-    }
-
-    /* Input label in white */
-    label {
-        color: white !important;
-        font-weight: bold;
-        font-size: 18px;
-    }
-
-    /* Input box text white and border white */
-    div[data-baseweb="input"] > input {
-        background-color: #000000 !important;
-        color: white !important;
-        border: 1px solid white !important;
-    }
-
-    /* Input box focused state border white */
-    div[data-baseweb="input"] > input:focus {
-        border-color: white !important;
-        outline: none !important;
-        box-shadow: 0 0 0 1px white !important;
-    }
-
-    /* Set app background to black */
-    .stApp {
-        background-color: #000000;
-        padding: 30px;
-    }
-
-    /* Saving interest text white */
-    .saving-interest {
-        color: white;
-        font-size: 16px;
-        margin-top: -10px;
-        margin-bottom: 20px;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
-# Header and subheader
-st.markdown('<h1 class="gradient-text">Deposito Simulation</h1>', unsafe_allow_html=True)
-
-subheader_text = """
-This website will simulate how your money grows in a year if you invest in time deposits, compared to a savings account, which typically decreases your time value of money.
-"""
-st.markdown(f'<p class="subheader-text">{subheader_text}</p>', unsafe_allow_html=True)
-
-# Input money
+# Input: initial money
 principal = st.number_input("Input your money (Rp)", min_value=100000, step=100000, format="%d")
 
-# Show saving interest rate below
-st.markdown('<p class="saving-interest">Default Saving Account Interest Rate: 0.25% p.a.</p>', unsafe_allow_html=True)
+# Default savings interest
+saving_rate_annual = 0.0025  # 0.25%
+saving_rate_monthly = saving_rate_annual / 12
+
+# Simulate from June to December
+months = ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+balances = []
+
+amount = principal
+for i in range(len(months)):
+    interest = amount * saving_rate_monthly
+    amount += interest
+    balances.append(round(amount))
+
+# Build dataframe for chart
+df = pd.DataFrame({
+    'Month': months,
+    'Savings Balance (Rp)': balances
+})
+
+# Display savings rate info
+st.markdown(f"**Default Saving Account Interest Rate:** {saving_rate_annual * 100:.2f}% p.a.")
+
+# Plot chart
+st.line_chart(df.set_index('Month'))
