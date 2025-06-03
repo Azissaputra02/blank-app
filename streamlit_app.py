@@ -2,32 +2,24 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
-# --- Custom CSS for header and subheader ---
+st.set_page_config(page_title="RUPTL Comparison Dashboard", layout="wide")
 st.markdown("""
-    <style>
-    .gradient-text {
-        font-size: 48px;
-        font-weight: bold;
-        background: linear-gradient(to right, green, blue, white);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 0;
-    }
-    .white-subheader {
-        font-size: 18px;
-        color: white;
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-    body {
-        background-color: black;
-        color: white;
-    }
-    </style>
-    <h1 class="gradient-text">Deposito Simulation</h1>
-    <p class="white-subheader">This website will simulate how your money grows in a year if you invest in time deposits, compared to a savings account, which typically decreases your time value of money.</p>
+<h1 style="
+    font-size: 3em;
+    font-weight: 900;
+    background: linear-gradient(to right, #8e44ad, #2980b9, #e84393);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: left;
+    margin-top: -20px;
+">
+RUPTL Comparison Dashboard
+</h1>
 """, unsafe_allow_html=True)
-
+st.markdown("""
+Welcome to the **Time Deposit Simulation**. This website will simulate how your money grows in a year if you invest in time deposits, compared to a savings account, which typically decreases your time value of money
+""", unsafe_allow_html=True)
+    
 # --- Input: Amount of Money ---
 principal = st.number_input("Input your money (Rp)", min_value=0, step=1_000_000, format="%d")
 
