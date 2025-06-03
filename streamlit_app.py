@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
-st.set_page_config(page_title="RUPTL Comparison Dashboard", layout="wide")
+st.set_page_config(page_title="Time Deposit Simulation", layout="wide")
 st.markdown("""
 <h1 style="
     font-size: 3em;
