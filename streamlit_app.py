@@ -2,9 +2,70 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
-st.title("Deposito Simulation")
-st.write("This website will simulate how your money grows in a year if you invest in time deposits, compared to a savings account, which typically decreases your time value of money.")
+import streamlit as st
 
+st.markdown("""
+    <style>
+    /* Gradient text for header */
+    .gradient-text {
+        font-size: 48px;
+        font-weight: bold;
+        background: linear-gradient(90deg, green, blue);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* White colored subheader text */
+    .subheader-text {
+        color: white;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    /* Input label in white */
+    label {
+        color: white !important;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    /* Input box text white and border white */
+    div[data-baseweb="input"] > input {
+        background-color: #000000 !important;
+        color: white !important;
+        border: 1px solid white !important;
+    }
+
+    /* Input box focused state border white */
+    div[data-baseweb="input"] > input:focus {
+        border-color: white !important;
+        outline: none !important;
+        box-shadow: 0 0 0 1px white !important;
+    }
+
+    /* Set app background to black */
+    .stApp {
+        background-color: #000000;
+        padding: 30px;
+    }
+
+    /* Saving interest text white */
+    .saving-interest {
+        color: white;
+        font-size: 16px;
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# Header and subheader
+st.markdown('<h1 class="gradient-text">Deposito Simulation</h1>', unsafe_allow_html=True)
+
+subheader_text = """
+This website will simulate how your money grows in a year if you invest in time deposits, compared to a savings account, which typically decreases your time value of money.
+"""
+st.markdown(f'<p class="subheader-text">{subheader_text}</p>', unsafe_allow_html=True)
 # Input
 principal = st.number_input("Input your money (Rp)", min_value=0, step=1_000_000, format="%d")
 
