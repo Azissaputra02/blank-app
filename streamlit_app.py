@@ -13,7 +13,7 @@ st.markdown("""
     text-align: left;
     margin-top: -20px;
 ">
-RUPTL Comparison Dashboard
+Time Deposit
 </h1>
 """, unsafe_allow_html=True)
 st.markdown("""
