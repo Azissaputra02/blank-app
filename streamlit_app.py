@@ -2,107 +2,76 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
+# --- Custom CSS for header and subheader ---
 st.markdown("""
     <style>
-    /* Gradient text for header */
     .gradient-text {
         font-size: 48px;
         font-weight: bold;
-        background: linear-gradient(90deg, green, blue);
+        background: linear-gradient(to right, green, blue, white);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        margin-bottom: 0;
     }
-
-    /* White colored subheader text */
-    .subheader-text {
-        color: white;
-        font-size: 20px;
-        margin-bottom: 30px;
-    }
-
-    /* Input label in white */
-    label {
-        color: white !important;
-        font-weight: bold;
+    .white-subheader {
         font-size: 18px;
-    }
-
-    /* Input box text white and border white */
-    div[data-baseweb="input"] > input {
-        background-color: #000000 !important;
-        color: white !important;
-        border: 1px solid white !important;
-    }
-
-    /* Input box focused state border white */
-    div[data-baseweb="input"] > input:focus {
-        border-color: white !important;
-        outline: none !important;
-        box-shadow: 0 0 0 1px white !important;
-    }
-
-    /* Set app background to black */
-    .stApp {
-        background-color: #000000;
-        padding: 30px;
-    }
-
-    /* Saving interest text white */
-    .saving-interest {
         color: white;
-        font-size: 16px;
-        margin-top: -10px;
+        margin-top: 0;
         margin-bottom: 20px;
     }
+    body {
+        background-color: black;
+        color: white;
+    }
     </style>
+    <h1 class="gradient-text">Deposito Simulation</h1>
+    <p class="white-subheader">This website will simulate how your money grows in a year if you invest in time deposits, compared to a savings account, which typically decreases your time value of money.</p>
 """, unsafe_allow_html=True)
 
-# Header and subheader
-st.markdown('<h1 class="gradient-text">Deposito Simulation</h1>', unsafe_allow_html=True)
-
-subheader_text = """
-This website will simulate how your money grows in a year if you invest in time deposits, compared to a savings account, which typically decreases your time value of money.
-"""
-st.markdown(f'<p class="subheader-text">{subheader_text}</p>', unsafe_allow_html=True)
-# Input
+# --- Input: Amount of Money ---
 principal = st.number_input("Input your money (Rp)", min_value=0, step=1_000_000, format="%d")
 
-# Run simulation only if amount > 0
 if principal > 0:
-    saving_rate_annual = 0.0025
+    # --- Default savings interest rate ---
+    saving_rate_annual = 0.0025  # 0.25% per year
     saving_rate_monthly = saving_rate_annual / 12
 
+    # --- Simulate 12 months ---
     months = [f"{i}-month" for i in range(1, 13)]
     balances = []
-
     amount = principal
+
     for _ in months:
         interest = amount * saving_rate_monthly
         amount += interest
         balances.append(round(amount))
 
+    # --- DataFrame ---
     df = pd.DataFrame({
         'Month': months,
-        'Savings Balance (Rp)': balances
+        'Savings Balance (Rp)': balances,
+        'MonthNum': list(range(1, 13))
     })
 
-    # Display saving rate
+    # --- Display rate ---
     st.markdown(f"**Default Saving Account Interest Rate:** {saving_rate_annual * 100:.2f}% p.a.")
 
-    # Calculate zoomed-in Y-axis range
+    # --- Y-axis zoom (small change visualization) ---
     min_y = min(balances)
     max_y = max(balances)
-    y_range = [min_y * 0.998, max_y * 1.002]  # 0.2% padding
+    y_range = [min_y * 0.998, max_y * 1.002]
 
-    # Altair chart with zoomed Y-axis
+    # --- Altair chart with zoomed-in Y-axis and ordered X-axis ---
     chart = alt.Chart(df).mark_line(point=True).encode(
-        x=alt.X('Month', title='Month'),
-        y=alt.Y('Savings Balance (Rp)', title='Balance (Rp)', scale=alt.Scale(domain=y_range)),
-        tooltip=['Month', 'Savings Balance (Rp)']
+        x=alt.X('MonthNum:O', title='Month', axis=alt.Axis(labels=False), sort=list(range(1, 13))),
+        tooltip=['Month', 'Savings Balance (Rp)'],
+        y=alt.Y('Savings Balance (Rp)', title='Balance (Rp)', scale=alt.Scale(domain=y_range))
     ).properties(
         width=700,
         height=400,
         title="Savings Account Growth (0.25% p.a.)"
+    ).configure_axisX(
+        labelExpr='datum.value + "-month"'
     )
 
     st.altair_chart(chart)
