@@ -153,4 +153,4 @@ df_summary['Total Balance (Rp)'] = df_summary['Total Balance (Rp)'].map('{:,.0f}
 st.markdown("### 💼 Summary Table (after 12 months)")
 st.dataframe(df_summary, use_container_width=True)
 else:
-    st.info("💡 Pleasenn input your money above to simulate.")
+    st.info("💡 Please input your money above to simulate.")
