@@ -127,5 +127,30 @@ if principal > 0:
     )
 
     st.altair_chart(chart, use_container_width=True)
+    # --- Summary Table ---
+summary_data = {
+    'Product': [
+        'Saving Account',
+        f"{bank1} {tenor1}mo",
+        f"{bank2} {tenor2}mo"
+    ],
+    'Total Return (Rp)': [
+        saving_balances[-1] - principal,
+        deposit1_balances[-1] - principal,
+        deposit2_balances[-1] - principal
+    ],
+    'Total Balance (Rp)': [
+        saving_balances[-1],
+        deposit1_balances[-1],
+        deposit2_balances[-1]
+    ]
+}
+
+df_summary = pd.DataFrame(summary_data)
+df_summary['Total Return (Rp)'] = df_summary['Total Return (Rp)'].map('{:,.0f}'.format)
+df_summary['Total Balance (Rp)'] = df_summary['Total Balance (Rp)'].map('{:,.0f}'.format)
+
+st.markdown("### 💼 Summary Table (after 12 months)")
+st.dataframe(df_summary, use_container_width=True)
 else:
     st.info("💡 Pleasenn input your money above to simulate.")
