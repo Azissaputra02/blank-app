@@ -69,4 +69,4 @@ if principal > 0:
     st.altair_chart(chart)
 
 else:
-    st.info("Puki Please input your money above to simulate")
+    st.info("Tung-tung Please input your money above to simulate")
