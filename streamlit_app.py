@@ -128,4 +128,4 @@ if principal > 0:
 
     st.altair_chart(chart, use_container_width=True)
 else:
-    st.info("💡 Please input your money above to simulate.")
+    st.info("💡 Pleasenn input your money above to simulate.")
