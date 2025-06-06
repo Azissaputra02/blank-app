@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
-st.write('Azis')
-
 # --- Page Configuration ---
 st.set_page_config(page_title="Time Deposit Simulation", layout="wide")
 
