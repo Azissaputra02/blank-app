@@ -107,6 +107,7 @@ elif st.session_state.page == "SOP HCSP":
     st.markdown("- Pekerja harus melengkapi dokumen maksimal **5 hari kerja** sebelum tanggal mulai kerja.")
 
     # Sub-bab 2
+    st.markdown("---")
     st.markdown("#### 2. Proses Onboarding")
     st.markdown("""
     | **Stakeholder**     | **Tugas**                                                                                   |
