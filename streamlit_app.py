@@ -1,21 +1,25 @@
 import streamlit as st
 
-# Atur default state jika belum ada
+# Inisialisasi page state
 if "page" not in st.session_state:
     st.session_state.page = "Home"
 
-# Fungsi untuk mengubah halaman
+# Fungsi untuk berpindah halaman
 def go_to(page_name):
     st.session_state.page = page_name
 
-# Sidebar
-st.sidebar.title("Navigasi SOP")
+# Sidebar radio dengan key berbeda
 selected_page = st.sidebar.radio(
     "Pilih Halaman:",
     ("Home", "SOP HCSP", "SOP Benefit", "SOP Payroll"),
     index=("Home", "SOP HCSP", "SOP Benefit", "SOP Payroll").index(st.session_state.page),
-    key="page"
+    key="selected_page"
 )
+
+# Sinkronisasi pilihan sidebar dengan state utama
+if selected_page != st.session_state.page:
+    st.session_state.page = selected_page
+    st.rerun()
 
 # Halaman Home
 if st.session_state.page == "Home":
@@ -50,7 +54,7 @@ if st.session_state.page == "Home":
             st.rerun()
 
 # Halaman SOP HCSP
-if st.session_state.page == "SOP HCSP":
+elif st.session_state.page == "SOP HCSP":
     st.header("📘 SOP HCSP")
     st.write("Berisi seluruh alur dan ketentuan dalam layanan Human Capital Service Partner (HCSP), seperti preboarding, onboarding, perubahan status, dan lainnya.")
 
