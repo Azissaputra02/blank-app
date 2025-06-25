@@ -763,6 +763,51 @@ elif st.session_state.page == "HCSP":
         st.markdown("- Update sistem & payroll maksimal **H-5 sebelum cut-off**")
         st.markdown("---")
 
+    elif selected_hcsp == "7. Surat Keterangan Kerja":
+        st.markdown("#### 1. Proses Permintaan Surat Keterangan Kerja Aktif")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                        |
+        |-----------------|------------------------------------------------------------------|
+        | Pekerja         | - Ajukan permintaan melalui sistem HC/email ke HCSP              |
+        | HCSP            | - Verifikasi status kepegawaian & susun surat                    |
+        | HCSP            | - Kirim surat bertandatangan digital/fisik ke pekerja            |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Data diri pekerja (ditarik otomatis dari sistem)")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Umumnya digunakan untuk pengajuan **KPR, pinjaman, visa**, dll\n- Maksimal pengajuan **1x per bulan**, kecuali kebutuhan mendesak")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Surat terbit maksimal **3 hari kerja** sejak permintaan diterima")
+
+        st.markdown("---")
+        st.markdown("#### 2. Proses Permintaan Surat Rekomendasi/Referensi Kerja")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                        |
+        |-----------------|------------------------------------------------------------------|
+        | Pekerja         | - Ajukan permintaan melalui PUK atau langsung ke HCSP            |
+        | PUK             | - Beri persetujuan & input isi rekomendasi                       |
+        | HCSP            | - Susun dan kirim surat berdasarkan input dari PUK               |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Surat permintaan atau email formal dari pekerja")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Surat rekomendasi **tidak wajib** dan sesuai kebijakan unit kerja\n- Bisa diberikan untuk pekerja aktif atau yang **sudah resign** dalam waktu tertentu")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Surat terbit maksimal **5 hari kerja** setelah semua data lengkap")
+        st.markdown("---")
+
 # Halaman SOP Benefit
 elif st.session_state.page == "Benefit":
     st.header("🎁 SOP Benefit")
