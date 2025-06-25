@@ -88,7 +88,7 @@ elif st.session_state.page == "HCSP":
         "10. Employee Service Center",
         "11. Pengakhiran Hubungan Kerja"
     ]
-    selected_hcsp = st.selectbox("Pilih topik HCSP:", hcsp_options)
+    selected_hcsp = st.selectbox("Pilih topik:", hcsp_options)
 
     # Tampilkan konten berdasarkan pilihan
     if selected_hcsp == "1. Preboarding":
