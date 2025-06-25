@@ -653,6 +653,116 @@ elif st.session_state.page == "HCSP":
         st.markdown("- Maksimal **7 hari kerja** sejak dokumen permohonan lengkap")
         st.markdown("---")
 
+    elif selected_hcsp == "6. Perubahan Status Kepegawaian":
+        st.markdown("#### 1. Proses Perubahan Data Pribadi")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                        |
+        |-----------------|------------------------------------------------------------------|
+        | Pekerja         | - Melakukan pembaruan data (alamat, telp, status pernikahan, dll) |
+        | HCSP            | - Verifikasi & update data dalam sistem HC                      |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- KTP baru, KK baru, Akta Nikah, atau dokumen pendukung lainnya")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Perubahan data penting untuk proses payroll, pajak, dan benefit")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Maksimal **3 hari kerja** sejak dokumen diterima")
+
+        st.markdown("---")
+        st.markdown("#### 2. Proses Perubahan Jabatan (Promosi/Demosi)")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                        |
+        |-----------------|------------------------------------------------------------------|
+        | PUK             | - Ajukan perubahan jabatan berdasarkan evaluasi kinerja          |
+        | HC Region       | - Review dan beri persetujuan                                    |
+        | HCSP            | - Update sistem & siapkan surat perubahan                        |
+        | Pekerja         | - Tanda tangan dokumen perubahan                                 |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Formulir perubahan jabatan & SK promosi/demosi")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Harus disertai bukti kinerja atau kebutuhan organisasi")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Maksimal **5 hari kerja** setelah disetujui")
+
+        st.markdown("---")
+        st.markdown("#### 3. Proses Mutasi/Rotasi Unit Kerja")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                        |
+        |-----------------|------------------------------------------------------------------|
+        | PUK             | - Ajukan mutasi antar unit/cabang ke HC Region                   |
+        | HCSP            | - Verifikasi & proses perpindahan di sistem                      |
+        | Pekerja         | - Menerima surat tugas dan lokasi kerja baru                     |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Surat mutasi atau rotasi resmi")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Mutasi dapat diminta oleh organisasi atau pekerja")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Maksimal **5 hari kerja** sejak surat disetujui")
+
+        st.markdown("---")
+        st.markdown("#### 4. Proses Perubahan Status Kontrak (PKWT ↔ PKWTT)")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                        |
+        |-----------------|------------------------------------------------------------------|
+        | HC Region       | - Ajukan perubahan status setelah evaluasi                       |
+        | HCSP            | - Siapkan & cetak kontrak baru                                   |
+        | Pekerja         | - Tanda tangan kontrak baru                                      |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Kontrak kerja baru & form evaluasi masa percobaan")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Harus sesuai ketentuan durasi kontrak & hasil evaluasi")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Tanda tangan kontrak maksimal **7 hari kerja sebelum efektif**")
+
+        st.markdown("---")
+        st.markdown("#### 5. Proses Perubahan Gaji")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                        |
+        |-----------------|------------------------------------------------------------------|
+        | PUK             | - Ajukan penyesuaian gaji berdasarkan review/promosi             |
+        | HC Region       | - Setujui dan kirim ke HCSP                                      |
+        | HCSP            | - Update nominal gaji di sistem dan payroll                      |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Surat keputusan penyesuaian gaji")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Berlaku sejak tanggal efektif yang telah ditentukan")
+
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Update sistem & payroll maksimal **H-5 sebelum cut-off**")
+        st.markdown("---")
+
 # Halaman SOP Benefit
 elif st.session_state.page == "Benefit":
     st.header("🎁 SOP Benefit")
