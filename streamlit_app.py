@@ -853,7 +853,7 @@ elif st.session_state.page == "HCSP":
         st.markdown("- Implementasi maksimal **7 hari kerja** sejak persetujuan")
         st.markdown("---")
 
-    elif selected_hcsp == "9. Employee Service Center (ESC)":
+    elif selected_hcsp == "9. Employee Service Center":
         st.markdown("#### 1. Proses Penanganan Pertanyaan dan Permintaan Informasi HC")
         st.markdown("""
         | **Stakeholder**  | **Tugas**                                                                 |
