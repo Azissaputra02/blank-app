@@ -81,12 +81,11 @@ elif st.session_state.page == "HCSP":
         "3. Identity (ID Card)",
         "4. Absensi Kehadiran Work From Home",
         "5. Manajemen Waktu",
-        "6. Perubahan status kepegawaian (1)",
-        "7. Perubahan status kepegawaian (2)",
-        "8. Surat Keterangan Kerja",
-        "9. Program Retensi Pegawai",
-        "10. Employee Service Center",
-        "11. Pengakhiran Hubungan Kerja"
+        "6. Perubahan status kepegawaian",
+        "7. Surat Keterangan Kerja",
+        "8. Program Retensi Pegawai",
+        "9. Employee Service Center",
+        "10. Pengakhiran Hubungan Kerja"
     ]
     selected_hcsp = st.selectbox("Pilih topik:", hcsp_options)
 
