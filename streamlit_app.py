@@ -853,6 +853,55 @@ elif st.session_state.page == "HCSP":
         st.markdown("- Implementasi maksimal **7 hari kerja** sejak persetujuan")
         st.markdown("---")
 
+    elif selected_hcsp == "9. Employee Service Center (ESC)":
+        st.markdown("#### 1. Proses Penanganan Pertanyaan dan Permintaan Informasi HC")
+        st.markdown("""
+        | **Stakeholder**  | **Tugas**                                                                 |
+        |------------------|---------------------------------------------------------------------------|
+        | Pekerja          | - Menghubungi ESC untuk pertanyaan HC (benefit, payroll, cuti, dll.)     |
+        | ESC Agent (HCSP) | - Menerima & mencatat tiket layanan melalui kanal resmi                   |
+        | ESC Agent        | - Menjawab langsung / eskalasi ke unit terkait jika perlu                 |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Tidak ada, kecuali jika permintaan terkait dokumen personal")
+
+        st.markdown("---")
+        st.markdown("📬 **Saluran Resmi:**")
+        st.markdown("- Email ESC\n- WhatsApp ESC\n- MS Teams HC Channel\n- Hotline internal")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan:**")
+        st.markdown("- Semua pertanyaan & permintaan dicatat dalam sistem ticketing untuk monitoring SLA")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Respon awal: maksimal **2 hari kerja**\n- Penyelesaian: maksimal **5 hari kerja** atau sesuai SLA layanan")
+
+        st.markdown("---")
+        st.markdown("#### 2. Proses Permintaan Dokumen oleh Pekerja")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                                 |
+        |-----------------|----------------------------------------------------------------------------|
+        | Pekerja         | - Kirim permintaan dokumen ke ESC (e.g., slip gaji, surat keterangan)     |
+        | ESC             | - Verifikasi & terbitkan dokumen via sistem/email                         |
+        | ESC             | - Catat pengiriman ke dalam log layanan                                   |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Permintaan via email atau sistem ticketing")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan:**")
+        st.markdown("- Dokumen diberikan dalam format **PDF** atau **fisik** bila disetujui\n- Permintaan mendadak/massal akan disesuaikan dengan antrean")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Dokumen diterbitkan maksimal **3 hari kerja** sejak permintaan lengkap")
+        st.markdown("---")
+
 # Halaman SOP Benefit
 elif st.session_state.page == "Benefit":
     st.header("🎁 SOP Benefit")
