@@ -1,27 +1,25 @@
 import streamlit as st
 
-# Inisialisasi page state
+# Inisialisasi session_state
 if "page" not in st.session_state:
     st.session_state.page = "Home"
 
 # Fungsi untuk berpindah halaman
 def go_to(page_name):
     st.session_state.page = page_name
-
-# Sidebar radio dengan key berbeda
-selected_page = st.sidebar.radio(
-    "Pilih Halaman:",
-    ("Home", "SOP HCSP", "SOP Benefit", "SOP Payroll"),
-    index=("Home", "SOP HCSP", "SOP Benefit", "SOP Payroll").index(st.session_state.page),
-    key="selected_page"
-)
-
-# Sinkronisasi pilihan sidebar dengan state utama
-if selected_page != st.session_state.page:
-    st.session_state.page = selected_page
     st.rerun()
 
-# Halaman Home
+# Sidebar navigasi
+with st.sidebar:
+    st.markdown("## Navigasi SOP")
+    page = st.radio(
+        "Pilih Halaman:",
+        ("Home", "SOP HCSP", "SOP Benefit", "SOP Payroll"),
+        index=("Home", "SOP HCSP", "SOP Benefit", "SOP Payroll").index(st.session_state.page)
+    )
+    st.session_state.page = page
+
+# Tampilan halaman
 if st.session_state.page == "Home":
     st.markdown("""
     <h1 style="
@@ -39,31 +37,50 @@ if st.session_state.page == "Home":
 
     st.markdown("Panduan ringkas untuk memahami seluruh proses Human Capital Shared Service (HCSS) di Danamon. Dalam satu laman, Anda bisa mengakses 3 topik utama: **SOP HCSP**, **SOP Benefit**, dan **SOP Payroll** — semua dijelaskan secara singkat, jelas, dan praktis untuk memudahkan Anda dalam setiap kebutuhan kepegawaian.")
 
+    # Styling tombol
+    st.markdown("""
+        <style>
+        .sop-button button {
+            padding: 0.5em 1.5em;
+            font-weight: bold;
+            border-radius: 8px;
+            border: 1px solid #888;
+            background-color: #0E1117;
+            color: #EEE;
+            transition: 0.3s;
+            width: 100%;
+        }
+        .sop-button button:hover {
+            background-color: #333;
+            border-color: #8e44ad;
+            color: #fff;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+    # Tampilan 3 tombol sejajar
     col1, col2, col3 = st.columns(3)
     with col1:
-        if st.button("SOP HCSP"):
+        if st.button("SOP HCSP", key="hcsp_btn"):
             go_to("SOP HCSP")
-            st.rerun()
     with col2:
-        if st.button("SOP Benefit"):
+        if st.button("SOP Benefit", key="benefit_btn"):
             go_to("SOP Benefit")
-            st.rerun()
     with col3:
-        if st.button("SOP Payroll"):
+        if st.button("SOP Payroll", key="payroll_btn"):
             go_to("SOP Payroll")
-            st.rerun()
 
 # Halaman SOP HCSP
 elif st.session_state.page == "SOP HCSP":
     st.header("📘 SOP HCSP")
-    st.write("Berisi seluruh alur dan ketentuan dalam layanan Human Capital Service Partner (HCSP), seperti preboarding, onboarding, perubahan status, dan lainnya.")
+    st.markdown("Berikut adalah panduan ringkas dari seluruh proses dalam SOP Human Capital Service Partner, termasuk preboarding, onboarding, ID card, absensi, perubahan status, dan lain-lain.")
 
 # Halaman SOP Benefit
 elif st.session_state.page == "SOP Benefit":
     st.header("🎁 SOP Benefit")
-    st.write("Berisi panduan klaim dan pengelolaan benefit seperti asuransi kesehatan, tunjangan, dan fasilitas lainnya.")
+    st.markdown("Berikut adalah SOP terkait benefit untuk karyawan seperti tunjangan, reimburse, dan proses pengajuan klaim lainnya.")
 
 # Halaman SOP Payroll
 elif st.session_state.page == "SOP Payroll":
-    st.header("💰 SOP Payroll")
-    st.write("Berisi seluruh proses terkait penggajian karyawan, pemotongan pajak, komponen pendapatan, dan waktu pembayaran.")
+    st.header("💸 SOP Payroll")
+    st.markdown("Halaman ini menjelaskan alur proses payroll bulanan, komponen gaji, tanggal penting, dan prosedur terkait penggajian.")
