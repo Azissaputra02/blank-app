@@ -153,16 +153,22 @@ elif st.session_state.page == "HCSP":
 
         # Sub-bab 3
         st.markdown("---")
-        st.markdown("#### 3. Pembuatan ID Card")
+        st.markdown("#### 3. Langkah-Langkah Sebagai Pekerja Baru")
         st.markdown("""
-        | **Stakeholder**     | **Tugas**                                                                                   |
-        |----------------------|---------------------------------------------------------------------------------------------|
-        | HCSP Support         | - Ajukan permintaan ID Card ke vendor                                                      |
-        | Vendor              | - Produksi dan kirim ID Card dalam waktu maksimal **3 hari kerja**                          |
-        | PUK / Pekerja Baru  | - Mengambil ID Card di unit / HC / dikirim tergantung lokasi kerja                         |
-        """)
+        | **Stakeholder**           | **Tugas**                                                                                                        |
+        |---------------------------|------------------------------------------------------------------------------------------------------------------|
+        | Pekerja Baru              | - Akses sistem HC melalui link yang dikirim via email <br> - Unggah dokumen pribadi sesuai daftar <br> - Isi data onboarding (nomor rekening, ukuran seragam, dil.) <br> - Ajukan permintaan benefit opsional seperti kartu kredit (jika tersedia)       |
+        | HCSP                      | - Verifikasi kelengkapan data dan dokumen <br> - Kirim reminder jika data belum lengkap dalam 3 hari kerja |
+        """, unsafe_allow_html=True)
+        # st.markdown("""
+        # | **Stakeholder**     | **Tugas**                                                                                   |
+        # |----------------------|---------------------------------------------------------------------------------------------|
+        # | HCSP Support         | - Ajukan permintaan ID Card ke vendor                                                      |
+        # | Vendor              | - Produksi dan kirim ID Card dalam waktu maksimal **3 hari kerja**                          |
+        # | PUK / Pekerja Baru  | - Mengambil ID Card di unit / HC / dikirim tergantung lokasi kerja                         |
+        # """)
 
-        st.markdown("📎 *Jika pekerja pindah unit, ID Card dapat diminta ulang dengan approval dari atasan langsung.*")
+        # st.markdown("📎 *Jika pekerja pindah unit, ID Card dapat diminta ulang dengan approval dari atasan langsung.*")
 
         # Sub-bab 4
         st.markdown("#### 4. Absensi & Kehadiran WFH")
