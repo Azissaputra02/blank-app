@@ -432,6 +432,7 @@ elif st.session_state.page == "HCSP":
         st.markdown("---")
         st.markdown("⏱ **SLA Waktu:**")
         st.markdown("- Maksimal **5 hari kerja** sejak permintaan diterima")
+        st.markdown("---")
 
 # Halaman SOP Benefit
 elif st.session_state.page == "Benefit":
