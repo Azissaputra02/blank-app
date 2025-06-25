@@ -109,12 +109,20 @@ elif st.session_state.page == "SOP HCSP":
     # Sub-bab 2
     st.markdown("---")
     st.markdown("#### 2. Pelaksanaan Aktivitas untuk Pekerjaan Baru")
+    # st.markdown("""
+    # | **Stakeholder**     | **Tugas**                                                                                   |
+    # |----------------------|---------------------------------------------------------------------------------------------|
+    # | PUK (Pimpinan Unit Kerja)           | - Kirim email selamat datang ke pekerja baru (opsional dengan CC ke tim terkait) - Koordinasikan penyediaan meja, kursi, laptop, dan akses lokal                       |
+    # | HCSP Support         | - Siapkan dan distribusikan: • Seragam batik Danamon • ID Card dan Akses Kantor • Starter Kit (jika ada)     |
+    # | Pekerja Baru          | - - Ambil perlengkapan kerja di lokasi yang ditentukan-Konfirmasi penerimaan item via sistem HC (jika diminta)                           |
+    # """)
     st.markdown("""
-    | **Stakeholder**     | **Tugas**                                                                                   |
-    |----------------------|---------------------------------------------------------------------------------------------|
-    | PUK (Pimpinan Unit Kerja)           | - Kirim email selamat datang ke pekerja baru (opsional dengan CC ke tim terkait) - Koordinasikan penyediaan meja, kursi, laptop, dan akses lokal                       |
-    | HCSP Support         | - Siapkan dan distribusikan: • Seragam batik Danamon • ID Card dan Akses Kantor • Starter Kit (jika ada)     |
-    | Pekerja Baru          | - - Ambil perlengkapan kerja di lokasi yang ditentukan-Konfirmasi penerimaan item via sistem HC (jika diminta)                           |
+    | **Stakeholder**            | **Tugas**                                                                                  |
+    |---------------------------|---------------------------------------------------------------------------------------------|
+    | HCSP Support / HC Region  | - Buat **notifikasi penerimaan** via sistem HC kepada PUK  <br> - Kirim info preboarding ke calon pekerja via email |
+    | PUK (Pimpinan Unit Kerja) | - Persiapkan **workstation, alat kerja, dan akses sistem** <br> - Koordinasi dengan unit terkait jika perlu penyesuaian |
+    | Pekerja Baru              | - Terima email berisi **akses awal** (*user ID, link sistem HC, dll*) <br> - Mulai unggah dokumen prasyarat di sistem HC |
+    | HCSP                      | - Kirim **reminder** jika pekerja belum melengkapi dokumen dalam waktu 3 hari kerja        |
     """)
 
     # Sub-bab 3
