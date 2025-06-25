@@ -434,7 +434,7 @@ elif st.session_state.page == "HCSP":
         st.markdown("- Maksimal **5 hari kerja** sejak permintaan diterima")
         st.markdown("---")
 
-    elif selected_hcsp == "4. Absensi Kehadiran & Work From Home":
+    elif selected_hcsp == "4. Absensi Kehadiran Work From Home":
         st.markdown("#### 1. Proses Registrasi Akses Aplikasi Absensi")
         st.markdown("""
         | **Stakeholder** | **Tugas**                                                                 |
