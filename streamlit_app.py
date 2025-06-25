@@ -185,16 +185,37 @@ elif st.session_state.page == "HCSP":
 
         # Sub-bab 4
         st.markdown("---")
-        st.markdown("#### 4. Absensi & Kehadiran WFH")
+        st.markdown("#### 4. Proses Kelengkapan Dokumen")
         st.markdown("""
-        | **Stakeholder**     | **Tugas**                                                                                   |
-        |----------------------|---------------------------------------------------------------------------------------------|
-        | Pekerja              | - Wajib mengisi kehadiran harian melalui sistem HC sesuai jadwal                           |
-        | Atasan Langsung      | - Melakukan verifikasi & approval kehadiran                                                |
-        | HCSP Support         | - Memantau kepatuhan pengisian absensi dan memberikan notifikasi jika ada keterlambatan    |
+        | **Stakeholder**           | **Tugas**                                                                                                        |
+        |---------------------------|------------------------------------------------------------------------------------------------------------------|
+        | Pekerja Baru              | - Unggah seluruh dokumen wajib ke sistem HC <br> - Periksa kembali kelengkapan dokumen sebelum H-5 gajian |
+        | Talent Acquisition (TA)   | - Verifikasi awal kelengkapan dokumen saat proses rekrutmen <br> - Input awal data kandidat ke sistem HC      |
+        | HCSP Support              | - Final check dokumen onboarding <br> - Kirim reminder jika ada kekurangan <br> - Tandai status "SIAP GAJ!" jika dokumen sudah lengkap |
+        """, unsafe_allow_html=True)
+        
+                st.markdown("---")
+        st.markdown("📌 **Dokumen Wajib (untuk status "SIAP GAJI"):**")
+        st.markdown("""
+        - KTP & KK
+        - NPWP (wajib untuk perhitungan pajak)
+        - Buku Tabungan / Bukti Rekening Payroll
+        - BPJS Kesehatan (jika ada)
+        - Ijazah Terakhir
+        - Pas Foto
         """)
 
-        st.markdown("📌 *WFH harus sesuai jadwal resmi dan disetujui oleh atasan.*")
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("""
+        - Dokumen harus diunggah maksimal H-5 sebelum payroll cut-off.
+        - Jika belum lengkap, maka status gaji akan tertunda ke bulan berikutnya.
+        - Sistem akan otomatis mengirim pengingat ke pekerja setiap 2 hari.
+        """)
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Verifikasi kelengkapan oleh HCSP: maksimal 2 hari kerja setelah dokumen lengkap")
 
     elif selected_hcsp == "2. Onboarding":
         st.markdown("#### 2. Pelaksanaan Aktivitas untuk Pekerjaan Baru")
