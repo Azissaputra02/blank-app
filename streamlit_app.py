@@ -653,7 +653,7 @@ elif st.session_state.page == "HCSP":
         st.markdown("- Maksimal **7 hari kerja** sejak dokumen permohonan lengkap")
         st.markdown("---")
 
-    elif selected_hcsp == "6. Perubahan Status Kepegawaian":
+    elif selected_hcsp == "6. Perubahan status kepegawaian":
         st.markdown("#### 1. Proses Perubahan Data Pribadi")
         st.markdown("""
         | **Stakeholder** | **Tugas**                                                        |
