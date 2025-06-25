@@ -544,6 +544,116 @@ elif st.session_state.page == "HCSP":
         st.markdown("- Evaluasi dilakukan **per bulan**")
         st.markdown("---")
 
+    elif selected_hcsp == "5. Manajemen Waktu":
+        st.markdown("#### 1. Proses Pengajuan Cuti Tahunan")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                              |
+        |-----------------|------------------------------------------------------------------------|
+        | Pekerja         | - Mengajukan cuti melalui sistem HC/aplikasi cuti                     |
+        | Atasan          | - Menyetujui atau menolak pengajuan cuti                              |
+        | HCSP            | - Memperbarui dan merekap saldo cuti secara otomatis                  |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Tidak ada, dilakukan melalui sistem")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Cuti diambil jika saldo tersedia & sesuai kebutuhan operasional")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Pengajuan minimal **H-3 sebelum tanggal cuti**")
+
+        st.markdown("---")
+        st.markdown("#### 2. Proses Cuti Khusus (Menikah, Melahirkan, Duka, dll.)")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                              |
+        |-----------------|------------------------------------------------------------------------|
+        | Pekerja         | - Ajukan cuti khusus + lampirkan dokumen pendukung                    |
+        | Atasan          | - Memberi persetujuan                                                  |
+        | HCSP            | - Verifikasi & catat cuti ke dalam sistem                             |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Surat undangan, akta kelahiran, surat kematian *(sesuai jenis cuti)*")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Mengacu pada kebijakan perusahaan & UU Ketenagakerjaan")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Maksimal **3 hari kerja** setelah dokumen lengkap")
+
+        st.markdown("---")
+        st.markdown("#### 3. Proses Izin Tidak Masuk Kerja")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                              |
+        |-----------------|------------------------------------------------------------------------|
+        | Pekerja         | - Menginformasikan ke atasan secara langsung atau via sistem          |
+        | Atasan          | - Mencatat dan menyetujui alasan izin                                 |
+        | HCSP            | - Mencatat izin ke sistem                                              |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Informal (WA / Email / Verbal)")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Izin tanpa laporan dapat dianggap **alfa**")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Disampaikan **minimal di hari yang sama sebelum jam masuk kerja**")
+
+        st.markdown("---")
+        st.markdown("#### 4. Proses Perhitungan Cuti Pro-Rata")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                              |
+        |-----------------|------------------------------------------------------------------------|
+        | HCSP            | - Hitung hak cuti berdasarkan masa kerja berjalan                     |
+        | Pekerja         | - Dapat melihat cuti prorata di sistem                                |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Tidak ada")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Berlaku untuk pekerja baru, masuk, atau resign di tengah tahun")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Maksimal **1 minggu setelah tanggal kerja efektif**")
+
+        st.markdown("---")
+        st.markdown("#### 5. Proses Cuti di Luar Tanggungan (CDT)")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                              |
+        |-----------------|------------------------------------------------------------------------|
+        | Pekerja         | - Ajukan CDT melalui surat resmi ke PUK dan HC                        |
+        | PUK & HC Region | - Evaluasi & berikan keputusan disetujui/ditolak                      |
+        | HCSP            | - Catat CDT di sistem dan hentikan gaji jika disetujui                |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Surat permohonan resmi + dokumen pendukung *(surat dokter, belajar, dsb)*")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Hanya diberikan untuk alasan tertentu dengan persetujuan manajemen")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Maksimal **7 hari kerja** sejak dokumen permohonan lengkap")
+        st.markdown("---")
+
 # Halaman SOP Benefit
 elif st.session_state.page == "Benefit":
     st.header("🎁 SOP Benefit")
