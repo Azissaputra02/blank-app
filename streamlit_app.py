@@ -194,7 +194,7 @@ elif st.session_state.page == "HCSP":
         | HCSP Support              | - Final check dokumen onboarding <br> - Kirim reminder jika ada kekurangan <br> - Tandai status "SIAP GAJ!" jika dokumen sudah lengkap |
         """, unsafe_allow_html=True)
         
-                st.markdown("---")
+        st.markdown("---")
         st.markdown("📌 **Dokumen Wajib (untuk status "SIAP GAJI"):**")
         st.markdown("""
         - KTP & KK
