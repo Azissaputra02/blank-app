@@ -109,13 +109,22 @@ elif st.session_state.page == "SOP HCSP":
     # Sub-bab 2
     st.markdown("---")
     st.markdown("#### 2. Pelaksanaan Aktivitas untuk Pekerjaan Baru")
+    # st.markdown("#### 2. Pelaksanaan Aktivitas untuk Pekerjaan Baru")
     st.markdown("""
-    | **Stakeholder**     | **Tugas**                                                                                   |
-    |----------------------|---------------------------------------------------------------------------------------------|
-    | PUK (Pimpinan Unit Kerja)           | - Kirim email selamat datang ke pekerja baru (opsional dengan CC ke tim terkait) <br> - Koordinasikan penyediaan meja, kursi, laptop, dan akses lokal                       |
-    | HCSP Support         | - Siapkan dan distribusikan: Seragam batik Danamon, ID Card dan Akses Kantor, & Starter Kit (jika ada)     |
-    | Pekerja Baru          | - Ambil perlengkapan kerja di lokasi yang ditentukan , <br> -Konfirmasi penerimaan item via sistem HC (jika diminta)                           |
-    """)
+    | **Stakeholder**           | **Tugas**                                                                                                        |
+    |---------------------------|------------------------------------------------------------------------------------------------------------------|
+    | PUK (Pimpinan Unit Kerja) | - Kirim email selamat datang ke pekerja baru *(opsional dengan CC ke tim terkait)* <br> - Koordinasikan penyediaan meja, kursi, laptop, dan akses lokal |
+    | HCSP Support              | - Siapkan dan distribusikan: Seragam batik Danamon, ID Card & Akses Kantor, serta Starter Kit *(jika ada)*       |
+    | Pekerja Baru              | - Ambil perlengkapan kerja di lokasi yang ditentukan <br> - Konfirmasi penerimaan item via sistem HC *(jika diminta)* |
+    """, unsafe_allow_html=True)
+    # st.markdown("""
+    # | **Stakeholder**     | **Tugas**                                                                                   |
+    # |----------------------|---------------------------------------------------------------------------------------------|
+    # | PUK (Pimpinan Unit Kerja)           | - Kirim email selamat datang ke pekerja baru (opsional dengan CC ke tim terkait) <br> - Koordinasikan penyediaan meja, kursi, laptop, dan akses lokal                       |
+    # | HCSP Support         | - Siapkan dan distribusikan: Seragam batik Danamon, ID Card dan Akses Kantor, & Starter Kit (jika ada)     |
+    # | Pekerja Baru          | - Ambil perlengkapan kerja di lokasi yang ditentukan , <br> -Konfirmasi penerimaan item via sistem HC (jika diminta)                           |
+    # """)
+    
 
     # Sub-bab 3
     st.markdown("#### 3. Pembuatan ID Card")
