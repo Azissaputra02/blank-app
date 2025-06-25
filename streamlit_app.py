@@ -971,10 +971,29 @@ elif st.session_state.page == "HCSP":
 
 # Halaman SOP Benefit
 elif st.session_state.page == "Benefit":
-    st.header("🎁 SOP Benefit")
-    st.markdown("Berikut adalah SOP terkait benefit untuk karyawan seperti tunjangan, reimburse, dan proses pengajuan klaim lainnya.")
+    st.header("🎁 HC Benefit Quick Reference")
+    st.markdown("Panduan ringkas Human Capital Benefit. Pilih topik di bawah ini untuk melihat detailnya.")
+
+    # Dropdown untuk memilih sub-bab
+    hcsp_options = [
+        "1. Preboarding",
+        "2. Onboarding",
+        "3. Identity (ID Card)",
+        "4. Absensi Kehadiran Work From Home",
+        "5. Manajemen Waktu",
+        "6. Perubahan status kepegawaian",
+        "7. Surat Keterangan Kerja",
+        "8. Program Retensi Pegawai",
+        "9. Employee Service Center",
+        "10. Pengakhiran Hubungan Kerja"
+    ]
+    selected_hcsp = st.selectbox("Pilih topik:", hcsp_options)
+
+    # Tampilkan konten berdasarkan pilihan
+    if selected_hcsp == "1. Preboarding":
+        st.markdown("#### 1. Proses Preboarding")
 
 # Halaman SOP Payroll
 elif st.session_state.page == "Payroll":
-    st.header("💸 SOP Payroll")
+    st.header("💸 HC Payroll Quick Reference")
     st.markdown("Halaman ini menjelaskan alur proses payroll bulanan, komponen gaji, tanggal penting, dan prosedur terkait penggajian.")
