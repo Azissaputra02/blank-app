@@ -160,17 +160,31 @@ elif st.session_state.page == "HCSP":
         | Pekerja Baru              | - Akses sistem HC melalui link yang dikirim via email <br> - Unggah dokumen pribadi sesuai daftar <br> - Isi data onboarding (nomor rekening, ukuran seragam, dil.) <br> - Ajukan permintaan benefit opsional seperti kartu kredit (jika tersedia)       |
         | HCSP                      | - Verifikasi kelengkapan data dan dokumen <br> - Kirim reminder jika data belum lengkap dalam 3 hari kerja |
         """, unsafe_allow_html=True)
-        # st.markdown("""
-        # | **Stakeholder**     | **Tugas**                                                                                   |
-        # |----------------------|---------------------------------------------------------------------------------------------|
-        # | HCSP Support         | - Ajukan permintaan ID Card ke vendor                                                      |
-        # | Vendor              | - Produksi dan kirim ID Card dalam waktu maksimal **3 hari kerja**                          |
-        # | PUK / Pekerja Baru  | - Mengambil ID Card di unit / HC / dikirim tergantung lokasi kerja                         |
-        # """)
+        
+        st.markdown("---")
+        st.markdown("📌 **Daftar Dokumen & Data yang Harus Diisi oleh Pekerja Baru:**")
+        st.markdown("""
+        - Nomor Rekening Payroll
+        - NPWP
+        - Alamat Domisili
+        - Nomor KTP, KK
+        - Ukuran Baju (untuk batik)
+        - Nomor BPJS (jika sudah punya sebelumnya)
+        """)
 
-        # st.markdown("📎 *Jika pekerja pindah unit, ID Card dapat diminta ulang dengan approval dari atasan langsung.*")
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("""
+        - Pastikan semua dokumen dan data dilengkapi maksimal 5 hari kerja sebelum tanggal gajian agar gaji pertama bisa diproses.
+        - Permintaan kart kredit (opsional) bisa diajukan lewat sistem HC (fitur akan muncul setelah data lengkap).
+        """)
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Pengisian dan unggah data oleh pekerja baru: Maksimal 3 hari sejak terima email preboarding")
 
         # Sub-bab 4
+        st.markdown("---")
         st.markdown("#### 4. Absensi & Kehadiran WFH")
         st.markdown("""
         | **Stakeholder**     | **Tugas**                                                                                   |
