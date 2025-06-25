@@ -120,6 +120,62 @@ elif st.session_state.page == "HCSP":
         st.markdown("⏱ **SLA Waktu:**")
         st.markdown("- Pekerja harus melengkapi dokumen maksimal **5 hari kerja** sebelum tanggal mulai kerja.")
 
+        # Sub-bab 2
+        st.markdown("---")
+        st.markdown("#### 2. Pelaksanaan Aktivitas untuk Pekerjaan Baru")
+        st.markdown("""
+        | **Stakeholder**           | **Tugas**                                                                                                        |
+        |---------------------------|------------------------------------------------------------------------------------------------------------------|
+        | PUK (Pimpinan Unit Kerja) | - Kirim email selamat datang ke pekerja baru *(opsional dengan CC ke tim terkait)* <br> - Koordinasikan penyediaan meja, kursi, laptop, dan akses lokal |
+        | HCSP Support              | - Siapkan dan distribusikan: Seragam batik Danamon, ID Card & Akses Kantor, serta Starter Kit *(jika ada)*       |
+        | Pekerja Baru              | - Ambil perlengkapan kerja di lokasi yang ditentukan <br> - Konfirmasi penerimaan item via sistem HC *(jika diminta)* |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen atau Item yang Diterima Pekerja Baru:**")
+        st.markdown("""
+        - ID Card
+        - Seragam Batik (2 pcs)
+        - Starter Kit (tergantung fungsi dan lokasi)
+        - Akses Sistem (email, VPN, dil.)
+        """)
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("""
+        - Semua item idealnya sudah siap paling lambat hari pertama kerja.
+        - Jika pekerja WFH/hybrid, ID card bisa dikirimkan ke alamat rumah setelah konfirmasi alamat.
+        """)
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Distribusi perlengkapan: Maksimal H+1 dari tanggal mulai kerja")
+
+        # Sub-bab 3
+        st.markdown("---")
+        st.markdown("#### 3. Pembuatan ID Card")
+        st.markdown("""
+        | **Stakeholder**     | **Tugas**                                                                                   |
+        |----------------------|---------------------------------------------------------------------------------------------|
+        | HCSP Support         | - Ajukan permintaan ID Card ke vendor                                                      |
+        | Vendor              | - Produksi dan kirim ID Card dalam waktu maksimal **3 hari kerja**                          |
+        | PUK / Pekerja Baru  | - Mengambil ID Card di unit / HC / dikirim tergantung lokasi kerja                         |
+        """)
+
+        st.markdown("📎 *Jika pekerja pindah unit, ID Card dapat diminta ulang dengan approval dari atasan langsung.*")
+
+        # Sub-bab 4
+        st.markdown("#### 4. Absensi & Kehadiran WFH")
+        st.markdown("""
+        | **Stakeholder**     | **Tugas**                                                                                   |
+        |----------------------|---------------------------------------------------------------------------------------------|
+        | Pekerja              | - Wajib mengisi kehadiran harian melalui sistem HC sesuai jadwal                           |
+        | Atasan Langsung      | - Melakukan verifikasi & approval kehadiran                                                |
+        | HCSP Support         | - Memantau kepatuhan pengisian absensi dan memberikan notifikasi jika ada keterlambatan    |
+        """)
+
+        st.markdown("📌 *WFH harus sesuai jadwal resmi dan disetujui oleh atasan.*")
+
     elif selected_hcsp == "2. Onboarding":
         st.markdown("#### 2. Pelaksanaan Aktivitas untuk Pekerjaan Baru")
         st.markdown("""
