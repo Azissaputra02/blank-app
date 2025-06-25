@@ -358,17 +358,80 @@ elif st.session_state.page == "HCSP":
         st.markdown("⏱ **SLA Waktu:**")
         st.markdown("- Proses administrasi maksimal **7 hari kerja** setelah masa percobaan selesai.")
         st.markdown("---")
-    # elif selected_hcsp == "2. Onboarding":
-    #     st.markdown("#### 2. Pelaksanaan Aktivitas untuk Pekerjaan Baru")
-    #     st.markdown("""
-    #     | **Stakeholder**           | **Tugas**                                                                                                        |
-    #     |---------------------------|------------------------------------------------------------------------------------------------------------------|
-    #     | PUK (Pimpinan Unit Kerja) | - Kirim email selamat datang ke pekerja baru *(opsional dengan CC ke tim terkait)* <br> - Koordinasikan penyediaan meja, kursi, laptop, dan akses lokal |
-    #     | HCSP Support              | - Siapkan dan distribusikan: Seragam batik Danamon, ID Card & Akses Kantor, serta Starter Kit *(jika ada)*       |
-    #     | Pekerja Baru              | - Ambil perlengkapan kerja di lokasi yang ditentukan <br> - Konfirmasi penerimaan item via sistem HC *(jika diminta)* |
-    #     """, unsafe_allow_html=True)
 
-    # Kamu bisa lanjutkan elif elif elif... untuk sub bab 3 - 11
+    elif selected_hcsp == "3. Identity (ID Card)":
+        st.markdown("#### 1. Proses Penerbitan ID Card untuk Pekerja Baru")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                                                     |
+        |-----------------|-----------------------------------------------------------------------------------------------|
+        | HCSP            | - Input data pekerja baru ke sistem pembuatan ID Card                                        |
+        | Vendor          | - Mencetak ID Card berdasarkan data dari HCSP                                                 |
+        | HCSP            | - Menerima ID Card jadi dan kirim ke PUK atau rumah pekerja (jika remote)                    |
+        | PUK             | - Menyerahkan ID Card ke pekerja baru                                                         |
+        | Pekerja Baru    | - Menyimpan dan menggunakan ID Card saat bekerja di kantor                                    |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Data pekerja dari sistem HC")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("""
+        - Untuk pekerja di luar kantor pusat, pengiriman dilakukan via ekspedisi  
+        - ID Card **wajib dimiliki** oleh seluruh pekerja (tetap, kontrak, outsourcing)
+        """)
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Maksimal **7 hari kerja** setelah data diterima lengkap oleh HCSP")
+
+        st.markdown("---")
+        st.markdown("#### 2. Proses Penggantian ID Card karena Hilang atau Rusak")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                                                     |
+        |-----------------|-----------------------------------------------------------------------------------------------|
+        | Pekerja         | - Melaporkan kehilangan/kerusakan ID Card ke HCSP via email atau portal internal             |
+        | HCSP            | - Verifikasi laporan dan proses pencetakan ulang ke vendor                                   |
+        | HCSP            | - Menerima ID Card baru dan mendistribusikannya ke pekerja                                   |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Laporan kehilangan atau ID lama yang rusak *(jika tersedia)*")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("""
+        - Pekerja bertanggung jawab atas keamanan ID Card  
+        - Kehilangan > 2x dalam 1 tahun dapat dikenakan **catatan peringatan**
+        """)
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Maksimal **5 hari kerja** setelah laporan diterima")
+
+        st.markdown("---")
+        st.markdown("#### 3. Proses Perubahan ID Card karena Perubahan Unit/Jabatan")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                                                     |
+        |-----------------|-----------------------------------------------------------------------------------------------|
+        | PUK             | - Ajukan permintaan update ID Card ke HCSP saat ada perubahan jabatan/unit kerja             |
+        | HCSP            | - Ajukan pencetakan ulang ID Card ke vendor dengan data baru                                 |
+        | HCSP            | - Menerima ID Card baru dan menyerahkannya ke pekerja                                         |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Surat perubahan jabatan/unit dari sistem HC")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- ID Card lama **dikembalikan ke HCSP** sebelum ID baru diberikan")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Maksimal **5 hari kerja** sejak permintaan diterima")
 
 # Halaman SOP Benefit
 elif st.session_state.page == "Benefit":
