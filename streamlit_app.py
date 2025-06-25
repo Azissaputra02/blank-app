@@ -108,13 +108,13 @@ elif st.session_state.page == "SOP HCSP":
 
     # Sub-bab 2
     st.markdown("---")
-    st.markdown("#### 2. Proses Onboarding")
+    st.markdown("#### 2. Pelaksanaan Aktivitas untuk Pekerjaan Baru")
     st.markdown("""
     | **Stakeholder**     | **Tugas**                                                                                   |
     |----------------------|---------------------------------------------------------------------------------------------|
-    | PUK & HCSP           | - Lakukan **penyambutan dan orientasi awal** pada hari pertama kerja                       |
-    | Pekerja Baru         | - Mengikuti proses orientasi, pengenalan unit, budaya kerja dan nilai-nilai perusahaan     |
-    | HC Learning          | - Jadwalkan **program induksi dan pelatihan dasar** sesuai batch                           |
+    | PUK (Pimpinan Unit Kerja)           | - Kirim email selamat datang ke pekerja baru (opsional dengan CC ke tim terkait) - Koordinasikan penyediaan meja, kursi, laptop, dan akses lokal                       |
+    | HCSP Support         | - Siapkan dan distribusikan: • Seragam batik Danamon • ID Card dan Akses Kantor • Starter Kit (jika ada)     |
+    | Pekerja Baru          | - - Ambil perlengkapan kerja di lokasi yang ditentukan-Konfirmasi penerimaan item via sistem HC (jika diminta)                           |
     """)
 
     # Sub-bab 3
