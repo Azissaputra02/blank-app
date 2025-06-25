@@ -14,8 +14,8 @@ with st.sidebar:
     st.markdown("## Navigasi SOP")
     page = st.radio(
         "Pilih Halaman:",
-        ("Home", "SOP HCSP", "SOP Benefit", "SOP Payroll"),
-        index=("Home", "SOP HCSP", "SOP Benefit", "SOP Payroll").index(st.session_state.page)
+        ("Home", "HCSP", "Benefit", "Payroll"),
+        index=("Home", "HCSP", "Benefit", "Payroll").index(st.session_state.page)
     )
     st.session_state.page = page
 
@@ -61,17 +61,17 @@ if st.session_state.page == "Home":
     # Tampilan 3 tombol sejajar
     col1, col2, col3 = st.columns(3)
     with col1:
-        if st.button("SOP HCSP", key="hcsp_btn"):
-            go_to("SOP HCSP")
+        if st.button("HCSP", key="hcsp_btn"):
+            go_to("HCSP")
     with col2:
-        if st.button("SOP Benefit", key="benefit_btn"):
-            go_to("SOP Benefit")
+        if st.button("Benefit", key="benefit_btn"):
+            go_to("Benefit")
     with col3:
-        if st.button("SOP Payroll", key="payroll_btn"):
-            go_to("SOP Payroll")
+        if st.button("Payroll", key="payroll_btn"):
+            go_to("Payroll")
 
-elif st.session_state.page == "SOP HCSP":
-    st.header("📘 SOP HCSP")
+elif st.session_state.page == "HCSP":
+    st.header("📘 HCSP Quick Reference")
     st.markdown("Panduan ringkas Human Capital Service Partner. Pilih topik di bawah ini untuk melihat detailnya:")
 
     # Dropdown untuk memilih sub-bab
@@ -88,7 +88,7 @@ elif st.session_state.page == "SOP HCSP":
         "10. Employee Service Center",
         "11. Pengakhiran Hubungan Kerja"
     ]
-    selected_hcsp = st.selectbox("Pilih topik SOP HCSP:", hcsp_options)
+    selected_hcsp = st.selectbox("Pilih topik HCSP:", hcsp_options)
 
     # Tampilkan konten berdasarkan pilihan
     if selected_hcsp == "1. Preboarding":
@@ -224,11 +224,11 @@ elif st.session_state.page == "SOP HCSP":
 #     st.markdown("📌 *WFH harus sesuai jadwal resmi dan disetujui oleh atasan.*")
 
 # Halaman SOP Benefit
-elif st.session_state.page == "SOP Benefit":
+elif st.session_state.page == "Benefit":
     st.header("🎁 SOP Benefit")
     st.markdown("Berikut adalah SOP terkait benefit untuk karyawan seperti tunjangan, reimburse, dan proses pengajuan klaim lainnya.")
 
 # Halaman SOP Payroll
-elif st.session_state.page == "SOP Payroll":
+elif st.session_state.page == "Payroll":
     st.header("💸 SOP Payroll")
     st.markdown("Halaman ini menjelaskan alur proses payroll bulanan, komponen gaji, tanggal penting, dan prosedur terkait penggajian.")
