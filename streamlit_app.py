@@ -195,7 +195,7 @@ elif st.session_state.page == "HCSP":
         """, unsafe_allow_html=True)
         
         st.markdown("---")
-        st.markdown("📌 **Dokumen Wajib (untuk status "SIAP GAJI"):**")
+        st.markdown("📌 **Dokumen Wajib (untuk status SIAP GAJI):**")
         st.markdown("""
         - KTP & KK
         - NPWP (wajib untuk perhitungan pajak)
