@@ -11,7 +11,7 @@ st.markdown("""
     text-align: left;
     margin-top: -20px;
 ">
-Time Deposit Comparison
+HC Quick Reference
 </h1>
 """, unsafe_allow_html=True)
 
