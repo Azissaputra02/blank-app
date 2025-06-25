@@ -434,6 +434,116 @@ elif st.session_state.page == "HCSP":
         st.markdown("- Maksimal **5 hari kerja** sejak permintaan diterima")
         st.markdown("---")
 
+    elif selected_hcsp == "4. Absensi Kehadiran & Work From Home":
+        st.markdown("#### 1. Proses Registrasi Akses Aplikasi Absensi")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                                 |
+        |-----------------|---------------------------------------------------------------------------|
+        | HCSP            | - Memastikan pekerja memiliki akses ke sistem absensi                    |
+        | Pekerja         | - Melakukan login pertama & menyetujui kebijakan penggunaan aplikasi     |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Data pekerja dari sistem HC")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Akses diberikan saat preboarding atau onboarding")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Maksimal **H-1 sebelum tanggal mulai kerja**")
+
+        st.markdown("---")
+        st.markdown("#### 2. Proses Pencatatan Kehadiran Pagi")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                                 |
+        |-----------------|---------------------------------------------------------------------------|
+        | Pekerja         | - Melakukan absensi hadir via aplikasi maksimal pukul 09.00 WIB          |
+        | Sistem          | - Mencatat jam kehadiran dan lokasi otomatis                             |
+        | Atasan          | - Monitoring harian kehadiran tim                                        |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Tidak ada")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Keterlambatan tanpa keterangan dapat memengaruhi penilaian kinerja")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Maksimal **pukul 09.00 WIB** setiap hari kerja")
+
+        st.markdown("---")
+        st.markdown("#### 3. Proses Pencatatan Pulang")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                                 |
+        |-----------------|---------------------------------------------------------------------------|
+        | Pekerja         | - Melakukan absensi pulang saat selesai bekerja                          |
+        | Sistem          | - Mencatat jam dan lokasi absensi pulang                                 |
+        | Atasan          | - Verifikasi jika jam kerja tidak lengkap atau abnormal                  |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Tidak ada")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Jika lupa absen pulang, wajib lapor ke atasan untuk koreksi")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Absensi pulang dilakukan **sebelum pukul 18.00 WIB**")
+
+        st.markdown("---")
+        st.markdown("#### 4. Proses Pengajuan dan Perubahan Lokasi WFH")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                                 |
+        |-----------------|---------------------------------------------------------------------------|
+        | Pekerja         | - Ajukan WFH via sistem/email                                             |
+        | Atasan          | - Menyetujui permintaan WFH                                               |
+        | HCSP            | - Mencatat lokasi kerja baru untuk keperluan audit                       |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Form/email pengajuan WFH *(jika manual)*")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Lokasi WFH wajib bisa dipantau & memiliki koneksi kerja memadai")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Permintaan minimal **H-1 sebelum pelaksanaan**")
+
+        st.markdown("---")
+        st.markdown("#### 5. Proses Monitoring dan Evaluasi Kehadiran")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                                 |
+        |-----------------|---------------------------------------------------------------------------|
+        | HCSP            | - Rekap data absensi mingguan & bulanan                                   |
+        | Atasan          | - Evaluasi pola kehadiran tim                                             |
+        | Pekerja         | - Memberikan klarifikasi jika ada penyimpangan absensi                   |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Laporan absensi dari sistem")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Pola keterlambatan & ketidakhadiran masuk dalam catatan kinerja")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Evaluasi dilakukan **per bulan**")
+        st.markdown("---")
+
 # Halaman SOP Benefit
 elif st.session_state.page == "Benefit":
     st.header("🎁 SOP Benefit")
