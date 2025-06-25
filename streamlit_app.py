@@ -902,6 +902,73 @@ elif st.session_state.page == "HCSP":
         st.markdown("- Dokumen diterbitkan maksimal **3 hari kerja** sejak permintaan lengkap")
         st.markdown("---")
 
+    elif selected_hcsp == "10. Pengakhiran Hubungan Kerja":
+        st.markdown("#### 1. Proses Pengajuan Pengakhiran Hubungan Kerja (PHK, Resign, Pensiun)")
+        st.markdown("""
+        | **Stakeholder**  | **Tugas**                                                                          |
+        |------------------|-------------------------------------------------------------------------------------|
+        | PUK              | - Sampaikan rencana PHK/resign/pensiun ke HC Region & HCSP                         |
+        | HCSP             | - Verifikasi data & susun dokumen formal (SK PHK, surat resign, dll.)              |
+        | HC Region        | - Beri persetujuan atas dasar justifikasi dan kelengkapan dokumen                  |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Surat pengunduran diri\n- SK PHK / SK Pensiun\n- Checklist clearance")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan:**")
+        st.markdown("- Resign diajukan tertulis minimal **30 hari sebelumnya**\n- Proses mengikuti regulasi perusahaan & UU Ketenagakerjaan")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- SK terbit maksimal **7 hari kerja** setelah semua dokumen lengkap")
+
+        st.markdown("---")
+        st.markdown("#### 2. Proses Exit Clearance")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                                      |
+        |-----------------|---------------------------------------------------------------------------------|
+        | Pekerja         | - Kembalikan aset & dokumen (ID Card, laptop, akses sistem)                    |
+        | PUK             | - Cek dan verifikasi pengembalian aset                                          |
+        | HCSP            | - Catat status clearance & arsipkan dokumentasi                                 |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Form Exit Clearance\n- Bukti pengembalian aset")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan:**")
+        st.markdown("- Clearance wajib **sebelum tanggal akhir kerja**\n- Pembayaran final dapat ditahan jika aset belum kembali")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Clearance selesai maksimal **H-1** sebelum tanggal terakhir bekerja")
+
+        st.markdown("---")
+        st.markdown("#### 3. Proses Pembayaran Hak Pekerja (Final Payment)")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                                 |
+        |-----------------|----------------------------------------------------------------------------|
+        | HCSP            | - Hitung hak akhir: gaji, cuti, THR, kompensasi (jika ada)                |
+        | Finance         | - Proses pembayaran sesuai hasil perhitungan                              |
+        | Pekerja         | - Terima slip pembayaran & bukti transfer                                 |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Rekap hak akhir\n- Slip gaji terakhir")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan:**")
+        st.markdown("- Pembayaran dilakukan **setelah seluruh proses clearance selesai**")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Pembayaran final maksimal **14 hari kerja** setelah tanggal efektif akhir kerja")
+        st.markdown("---")
+
 # Halaman SOP Benefit
 elif st.session_state.page == "Benefit":
     st.header("🎁 SOP Benefit")
