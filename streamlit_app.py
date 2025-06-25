@@ -15,4 +15,5 @@ HC Quick Reference
 </h1>
 """, unsafe_allow_html=True)
 
-st.markdown("Compare time deposit returns from two banks and find which gives you a better deal—all in one place.")
+st.markdown("Panduan ringkas untuk memahami seluruh proses Human Capital Shared Service (HCSS) di Danamon. Dalam satu laman, Anda bisa mengakses 3 topik utama: SOP HCSP, SOP Benefit, dan SOP Payroll — semua dijelaskan secara singkat, jelas, dan praktis untuk memudahkan Anda dalam setiap kebutuhan kepegawaian.
+")
