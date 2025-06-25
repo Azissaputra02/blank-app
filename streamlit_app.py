@@ -19,7 +19,7 @@ with st.sidebar:
     )
     st.session_state.page = page
 
-# Tampilan halaman
+# Tampilan halaman Home
 if st.session_state.page == "Home":
     st.markdown("""
     <h1 style="
@@ -77,9 +77,9 @@ elif st.session_state.page == "SOP HCSP":
 
     st.markdown("### 🔷 **HC QUICK REFERENCE — SOP HCSP**")
 
+    # Sub-bab 1
+    st.markdown("#### 1. Proses Preboarding")
     st.markdown("""
-    #### 1. Proses Preboarding
-
     | **Stakeholder**            | **Tugas**                                                                                  |
     |---------------------------|---------------------------------------------------------------------------------------------|
     | HCSP Support / HC Region  | - Buat **notifikasi penerimaan** via sistem HC kepada PUK  <br> - Kirim info preboarding ke calon pekerja via email |
@@ -88,68 +88,57 @@ elif st.session_state.page == "SOP HCSP":
     | HCSP                      | - Kirim **reminder** jika pekerja belum melengkapi dokumen dalam waktu 3 hari kerja        |
     """, unsafe_allow_html=True)
 
+    st.markdown("---")
+    st.markdown("📌 **Dokumen Wajib dari Pekerja Baru:**")
     st.markdown("""
-    ---
-
-    📌 **Dokumen Wajib dari Pekerja Baru:**
-
     - KTP, KK, NPWP, Rekening Payroll, BPJS Kesehatan *(jika ada)*
     - Ijazah, Sertifikat Pendukung *(jika diminta)*
     """)
 
+    st.markdown("---")
+    st.markdown("⚠️ **Catatan Penting:**")
     st.markdown("""
-    ---
-
-    ⚠️ **Catatan Penting:**
-
     - Gaji **bulan pertama tidak bisa diproses** jika dokumen belum lengkap maksimal **5 hari kerja** sebelum tanggal gajian.
     - Reminder otomatis dikirim oleh sistem HC **setiap 2 hari** jika belum lengkap.
     """)
 
+    st.markdown("---")
+    st.markdown("⏱ **SLA Waktu:**")
+    st.markdown("- Pekerja harus melengkapi dokumen maksimal **5 hari kerja** sebelum tanggal mulai kerja.")
+
+    # Sub-bab 2
+    st.markdown("#### 2. Proses Onboarding")
     st.markdown("""
-    ---
-
-    ⏱ **SLA Waktu:**
-
-    - Pekerja harus melengkapi dokumen maksimal **5 hari kerja** sebelum tanggal mulai kerja.
+    | **Stakeholder**     | **Tugas**                                                                                   |
+    |----------------------|---------------------------------------------------------------------------------------------|
+    | PUK & HCSP           | - Lakukan **penyambutan dan orientasi awal** pada hari pertama kerja                       |
+    | Pekerja Baru         | - Mengikuti proses orientasi, pengenalan unit, budaya kerja dan nilai-nilai perusahaan     |
+    | HC Learning          | - Jadwalkan **program induksi dan pelatihan dasar** sesuai batch                           |
     """)
 
-st.markdown("""
-    #### 2. Proses Preboarding
-
-    | **Stakeholder**            | **Tugas**                                                                                  |
-    |---------------------------|---------------------------------------------------------------------------------------------|
-    | HCSP Support / HC Region  | - Buat **notifikasi penerimaan** via sistem HC kepada PUK  <br> - Kirim info preboarding ke calon pekerja via email |
-    | PUK (Pimpinan Unit Kerja) | - Persiapkan **workstation, alat kerja, dan akses sistem** <br> - Koordinasi dengan unit terkait jika perlu penyesuaian |
-    | Pekerja Baru              | - Terima email berisi **akses awal** (*user ID, link sistem HC, dll*) <br> - Mulai unggah dokumen prasyarat di sistem HC |
-    | HCSP                      | - Kirim **reminder** jika pekerja belum melengkapi dokumen dalam waktu 3 hari kerja        |
-    """, unsafe_allow_html=True)
-
+    # Sub-bab 3
+    st.markdown("#### 3. Pembuatan ID Card")
     st.markdown("""
-    ---
-
-    📌 **Dokumen Wajib dari Pekerja Baru:**
-
-    - KTP, KK, NPWP, Rekening Payroll, BPJS Kesehatan *(jika ada)*
-    - Ijazah, Sertifikat Pendukung *(jika diminta)*
+    | **Stakeholder**     | **Tugas**                                                                                   |
+    |----------------------|---------------------------------------------------------------------------------------------|
+    | HCSP Support         | - Ajukan permintaan ID Card ke vendor                                                      |
+    | Vendor              | - Produksi dan kirim ID Card dalam waktu maksimal **3 hari kerja**                          |
+    | PUK / Pekerja Baru  | - Mengambil ID Card di unit / HC / dikirim tergantung lokasi kerja                         |
     """)
 
+    st.markdown("📎 *Jika pekerja pindah unit, ID Card dapat diminta ulang dengan approval dari atasan langsung.*")
+
+    # Sub-bab 4
+    st.markdown("#### 4. Absensi & Kehadiran WFH")
     st.markdown("""
-    ---
-
-    ⚠️ **Catatan Penting:**
-
-    - Gaji **bulan pertama tidak bisa diproses** jika dokumen belum lengkap maksimal **5 hari kerja** sebelum tanggal gajian.
-    - Reminder otomatis dikirim oleh sistem HC **setiap 2 hari** jika belum lengkap.
+    | **Stakeholder**     | **Tugas**                                                                                   |
+    |----------------------|---------------------------------------------------------------------------------------------|
+    | Pekerja              | - Wajib mengisi kehadiran harian melalui sistem HC sesuai jadwal                           |
+    | Atasan Langsung      | - Melakukan verifikasi & approval kehadiran                                                |
+    | HCSP Support         | - Memantau kepatuhan pengisian absensi dan memberikan notifikasi jika ada keterlambatan    |
     """)
 
-    st.markdown("""
-    ---
-
-    ⏱ **SLA Waktu:**
-
-    - Pekerja harus melengkapi dokumen maksimal **5 hari kerja** sebelum tanggal mulai kerja.
-    """)
+    st.markdown("📌 *WFH harus sesuai jadwal resmi dan disetujui oleh atasan.*")
 
 # Halaman SOP Benefit
 elif st.session_state.page == "SOP Benefit":
