@@ -216,6 +216,7 @@ elif st.session_state.page == "HCSP":
         st.markdown("---")
         st.markdown("⏱ **SLA Waktu:**")
         st.markdown("- Verifikasi kelengkapan oleh HCSP: maksimal 2 hari kerja setelah dokumen lengkap")
+        st.markdown("---")
 
     elif selected_hcsp == "2. Onboarding":
         st.markdown("#### 2. Pelaksanaan Aktivitas untuk Pekerjaan Baru")
