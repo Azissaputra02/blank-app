@@ -72,7 +72,7 @@ if st.session_state.page == "Home":
 
 elif st.session_state.page == "HCSP":
     st.header("📘 HCSP Quick Reference")
-    st.markdown("Panduan ringkas Human Capital Service Partner. Pilih topik di bawah ini untuk melihat detailnya:")
+    st.markdown("Panduan ringkas Human Capital Service Partner. Pilih topik di bawah ini untuk melihat detailnya.")
 
     # Dropdown untuk memilih sub-bab
     hcsp_options = [
