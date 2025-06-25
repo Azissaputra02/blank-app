@@ -1,11 +1,24 @@
 import streamlit as st
 
-# Sidebar navigation
-st.sidebar.title("Navigasi SOP")
-page = st.sidebar.radio("Pilih Halaman:", ("Home", "SOP HCSP", "SOP Benefit", "SOP Payroll"))
+# Atur default state jika belum ada
+if "page" not in st.session_state:
+    st.session_state.page = "Home"
 
-# Main Title
-if page == "Home":
+# Fungsi untuk mengubah halaman
+def go_to(page_name):
+    st.session_state.page = page_name
+
+# Sidebar
+st.sidebar.title("Navigasi SOP")
+selected_page = st.sidebar.radio(
+    "Pilih Halaman:",
+    ("Home", "SOP HCSP", "SOP Benefit", "SOP Payroll"),
+    index=("Home", "SOP HCSP", "SOP Benefit", "SOP Payroll").index(st.session_state.page),
+    key="page"
+)
+
+# Halaman Home
+if st.session_state.page == "Home":
     st.markdown("""
     <h1 style="
         font-size: 3em;
@@ -25,26 +38,28 @@ if page == "Home":
     col1, col2, col3 = st.columns(3)
     with col1:
         if st.button("SOP HCSP"):
-            st.experimental_set_query_params(page="SOP HCSP")
+            go_to("SOP HCSP")
             st.rerun()
     with col2:
         if st.button("SOP Benefit"):
-            st.experimental_set_query_params(page="SOP Benefit")
+            go_to("SOP Benefit")
             st.rerun()
     with col3:
         if st.button("SOP Payroll"):
-            st.experimental_set_query_params(page="SOP Payroll")
+            go_to("SOP Payroll")
             st.rerun()
 
-# SOP Pages
-elif page == "SOP HCSP":
+# Halaman SOP HCSP
+if st.session_state.page == "SOP HCSP":
     st.header("📘 SOP HCSP")
     st.write("Berisi seluruh alur dan ketentuan dalam layanan Human Capital Service Partner (HCSP), seperti preboarding, onboarding, perubahan status, dan lainnya.")
 
-elif page == "SOP Benefit":
+# Halaman SOP Benefit
+elif st.session_state.page == "SOP Benefit":
     st.header("🎁 SOP Benefit")
     st.write("Berisi panduan klaim dan pengelolaan benefit seperti asuransi kesehatan, tunjangan, dan fasilitas lainnya.")
 
-elif page == "SOP Payroll":
+# Halaman SOP Payroll
+elif st.session_state.page == "SOP Payroll":
     st.header("💰 SOP Payroll")
     st.write("Berisi seluruh proses terkait penggajian karyawan, pemotongan pajak, komponen pendapatan, dan waktu pembayaran.")
