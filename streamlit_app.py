@@ -219,107 +219,156 @@ elif st.session_state.page == "HCSP":
         st.markdown("---")
 
     elif selected_hcsp == "2. Onboarding":
-        st.markdown("#### 2. Pelaksanaan Aktivitas untuk Pekerjaan Baru")
+        st.markdown("#### 1. Proses Onboarding Hari Pertama")
         st.markdown("""
-        | **Stakeholder**           | **Tugas**                                                                                                        |
-        |---------------------------|------------------------------------------------------------------------------------------------------------------|
-        | PUK (Pimpinan Unit Kerja) | - Kirim email selamat datang ke pekerja baru *(opsional dengan CC ke tim terkait)* <br> - Koordinasikan penyediaan meja, kursi, laptop, dan akses lokal |
-        | HCSP Support              | - Siapkan dan distribusikan: Seragam batik Danamon, ID Card & Akses Kantor, serta Starter Kit *(jika ada)*       |
-        | Pekerja Baru              | - Ambil perlengkapan kerja di lokasi yang ditentukan <br> - Konfirmasi penerimaan item via sistem HC *(jika diminta)* |
+        | **Stakeholder**           | **Tugas**                                                                 |
+        |---------------------------|---------------------------------------------------------------------------|
+        | PUK                       | - Menyambut pekerja baru, perkenalan tim, serta penjelasan peran kerja   |
+        | Pekerja Baru              | - Mengikuti perkenalan dan mulai beradaptasi dengan lingkungan kerja     |
+        | HCSP                      | - Memastikan pekerja aktif dalam sistem dan sudah mengakses email kantor |
         """, unsafe_allow_html=True)
 
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Tidak ada dokumen wajib.")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Hari pertama berfokus pada pengenalan unit kerja dan lingkungan.")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Dilaksanakan pada **H1 masuk kerja**.")
+
+        st.markdown("---")
+        st.markdown("#### 2. Proses Onboarding Minggu Pertama")
+        st.markdown("""
+        | **Stakeholder**           | **Tugas**                                                                                       |
+        |---------------------------|-------------------------------------------------------------------------------------------------|
+        | PUK                       | - Menjelaskan peran detail, struktur organisasi unit, dan ekspektasi kerja                      |
+        | HCSP                      | - Memfasilitasi akses ke platform internal jika belum tersedia                                  |
+        | Pekerja Baru              | - Menyelesaikan pembelajaran awal dan bertanya jika ada kendala                                 |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Panduan internal unit kerja *(jika ada)*")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- PUK dapat menunjuk **buddy** untuk membantu adaptasi.")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Diselesaikan maksimal **minggu pertama kerja**.")
+
+        st.markdown("---")
+        st.markdown("#### 3. Proses Onboarding Bulan Pertama")
+        st.markdown("""
+        | **Stakeholder**           | **Tugas**                                                                                       |
+        |---------------------------|-------------------------------------------------------------------------------------------------|
+        | PUK                       | - Memberikan arahan awal tugas dan project aktual                                               |
+        | HC Learning & Development | - Memastikan pekerja mengikuti pelatihan onboarding lanjutan                                   |
+        | Pekerja Baru              | - Menyelesaikan pelatihan dan mulai menjalankan pekerjaan fungsional                            |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("""
+        - Jadwal pelatihan  
+        - Form evaluasi pelatihan
+        """)
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Pekerja mulai **dievaluasi secara informal** terkait kesiapan kerja.")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Seluruh pelatihan dasar diselesaikan dalam **30 hari kerja**.")
+
+        st.markdown("---")
+        st.markdown("#### 4. Proses Onboarding Bulan Kedua dan Ketiga")
+        st.markdown("""
+        | **Stakeholder**           | **Tugas**                                                                                       |
+        |---------------------------|-------------------------------------------------------------------------------------------------|
+        | PUK                       | - Memberikan tanggung jawab lebih kompleks dan melakukan **coaching mingguan**                 |
+        | Pekerja Baru              | - Menunjukkan hasil kerja dan keterlibatan dalam tim                                            |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Form evaluasi berkala *(jika disediakan)*")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- **Keterlibatan aktif PUK** sangat memengaruhi keberhasilan onboarding.")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Coaching dilakukan secara mingguan selama **bulan ke-2 dan ke-3**.")
+
+        st.markdown("---")
+        st.markdown("#### 5. Proses Evaluasi Masa Percobaan")
+        st.markdown("""
+        | **Stakeholder**           | **Tugas**                                                                                       |
+        |---------------------------|-------------------------------------------------------------------------------------------------|
+        | PUK                       | - Menyusun hasil evaluasi selama masa percobaan dan diskusi dengan HC Region                   |
+        | HCSP                      | - Menyiapkan dokumen administrasi hasil evaluasi (lulus/tidak)                                 |
+        | Pekerja Baru              | - Menerima hasil evaluasi secara formal                                                        |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("""
+        - Form evaluasi masa percobaan  
+        - Surat hasil evaluasi
+        """)
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Masa percobaan umumnya **3 bulan**, tapi bisa diperpanjang jika perlu.")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Evaluasi final dilakukan maksimal **H-7 dari akhir masa percobaan**.")
+
+        st.markdown("---")
+        st.markdown("#### 6. Proses Perubahan PKWT menjadi PKWTT")
+        st.markdown("""
+        | **Stakeholder**           | **Tugas**                                                                                       |
+        |---------------------------|-------------------------------------------------------------------------------------------------|
+        | PUK                       | - Mengajukan rekomendasi perubahan status                                                      |
+        | HCSP                      | - Memproses perubahan dari kontrak ke tetap                                                    |
+        | Pekerja Baru              | - Menandatangani surat perjanjian kerja tetap                                                  |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("""
+        - Surat perubahan status  
+        - Kontrak PKWTT
+        """)
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Perubahan ini berlaku bagi **pekerja kontrak** yang **lulus masa percobaan**.")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Proses administrasi maksimal **7 hari kerja** setelah masa percobaan selesai.")
+        st.markdown("---")
+    # elif selected_hcsp == "2. Onboarding":
+    #     st.markdown("#### 2. Pelaksanaan Aktivitas untuk Pekerjaan Baru")
+    #     st.markdown("""
+    #     | **Stakeholder**           | **Tugas**                                                                                                        |
+    #     |---------------------------|------------------------------------------------------------------------------------------------------------------|
+    #     | PUK (Pimpinan Unit Kerja) | - Kirim email selamat datang ke pekerja baru *(opsional dengan CC ke tim terkait)* <br> - Koordinasikan penyediaan meja, kursi, laptop, dan akses lokal |
+    #     | HCSP Support              | - Siapkan dan distribusikan: Seragam batik Danamon, ID Card & Akses Kantor, serta Starter Kit *(jika ada)*       |
+    #     | Pekerja Baru              | - Ambil perlengkapan kerja di lokasi yang ditentukan <br> - Konfirmasi penerimaan item via sistem HC *(jika diminta)* |
+    #     """, unsafe_allow_html=True)
+
     # Kamu bisa lanjutkan elif elif elif... untuk sub bab 3 - 11
-# Halaman SOP HCSP
-# elif st.session_state.page == "SOP HCSP":
-#     st.header("📘 SOP HCSP")
-#     st.markdown("Berikut adalah panduan ringkas dari seluruh proses dalam SOP Human Capital Service Partner, termasuk preboarding, onboarding, ID card, absensi, perubahan status, dan lain-lain.")
-
-#     st.markdown("### 🔷 **HC QUICK REFERENCE — SOP HCSP**")
-
-#     # Sub-bab 1
-#     st.markdown("#### 1. Proses Preboarding")
-#     st.markdown("""
-#     | **Stakeholder**            | **Tugas**                                                                                  |
-#     |---------------------------|---------------------------------------------------------------------------------------------|
-#     | HCSP Support / HC Region  | - Buat **notifikasi penerimaan** via sistem HC kepada PUK  <br> - Kirim info preboarding ke calon pekerja via email |
-#     | PUK (Pimpinan Unit Kerja) | - Persiapkan **workstation, alat kerja, dan akses sistem** <br> - Koordinasi dengan unit terkait jika perlu penyesuaian |
-#     | Pekerja Baru              | - Terima email berisi **akses awal** (*user ID, link sistem HC, dll*) <br> - Mulai unggah dokumen prasyarat di sistem HC |
-#     | HCSP                      | - Kirim **reminder** jika pekerja belum melengkapi dokumen dalam waktu 3 hari kerja        |
-#     """, unsafe_allow_html=True)
-
-#     st.markdown("---")
-#     st.markdown("📌 **Dokumen Wajib dari Pekerja Baru:**")
-#     st.markdown("""
-#     - KTP, KK, NPWP, Rekening Payroll, BPJS Kesehatan *(jika ada)*
-#     - Ijazah, Sertifikat Pendukung *(jika diminta)*
-#     """)
-
-#     st.markdown("---")
-#     st.markdown("⚠️ **Catatan Penting:**")
-#     st.markdown("""
-#     - Gaji **bulan pertama tidak bisa diproses** jika dokumen belum lengkap maksimal **5 hari kerja** sebelum tanggal gajian.
-#     - Reminder otomatis dikirim oleh sistem HC **setiap 2 hari** jika belum lengkap.
-#     """)
-
-#     st.markdown("---")
-#     st.markdown("⏱ **SLA Waktu:**")
-#     st.markdown("- Pekerja harus melengkapi dokumen maksimal **5 hari kerja** sebelum tanggal mulai kerja.")
-
-#     # Sub-bab 2
-#     st.markdown("---")
-#     st.markdown("#### 2. Pelaksanaan Aktivitas untuk Pekerjaan Baru")
-#     st.markdown("""
-#     | **Stakeholder**           | **Tugas**                                                                                                        |
-#     |---------------------------|------------------------------------------------------------------------------------------------------------------|
-#     | PUK (Pimpinan Unit Kerja) | - Kirim email selamat datang ke pekerja baru *(opsional dengan CC ke tim terkait)* <br> - Koordinasikan penyediaan meja, kursi, laptop, dan akses lokal |
-#     | HCSP Support              | - Siapkan dan distribusikan: Seragam batik Danamon, ID Card & Akses Kantor, serta Starter Kit *(jika ada)*       |
-#     | Pekerja Baru              | - Ambil perlengkapan kerja di lokasi yang ditentukan <br> - Konfirmasi penerimaan item via sistem HC *(jika diminta)* |
-#     """, unsafe_allow_html=True)
-
-#     st.markdown("---")
-#     st.markdown("📌 **Dokumen atau Item yang Diterima Pekerja Baru:**")
-#     st.markdown("""
-#     - ID Card
-#     - Seragam Batik (2 pcs)
-#     - Starter Kit (tergantung fungsi dan lokasi)
-#     - Akses Sistem (email, VPN, dil.)
-#     """)
-
-#     st.markdown("---")
-#     st.markdown("⚠️ **Catatan Penting:**")
-#     st.markdown("""
-#     - Semua item idealnya sudah siap paling lambat hari pertama kerja.
-#     - Jika pekerja WFH/hybrid, ID card bisa dikirimkan ke alamat rumah setelah konfirmasi alamat.
-#     """)
-
-#     st.markdown("---")
-#     st.markdown("⏱ **SLA Waktu:**")
-#     st.markdown("- Distribusi perlengkapan: Maksimal H+1 dari tanggal mulai kerja")
-
-#     # Sub-bab 3
-#     st.markdown("---")
-#     st.markdown("#### 3. Pembuatan ID Card")
-#     st.markdown("""
-#     | **Stakeholder**     | **Tugas**                                                                                   |
-#     |----------------------|---------------------------------------------------------------------------------------------|
-#     | HCSP Support         | - Ajukan permintaan ID Card ke vendor                                                      |
-#     | Vendor              | - Produksi dan kirim ID Card dalam waktu maksimal **3 hari kerja**                          |
-#     | PUK / Pekerja Baru  | - Mengambil ID Card di unit / HC / dikirim tergantung lokasi kerja                         |
-#     """)
-
-#     st.markdown("📎 *Jika pekerja pindah unit, ID Card dapat diminta ulang dengan approval dari atasan langsung.*")
-
-#     # Sub-bab 4
-#     st.markdown("#### 4. Absensi & Kehadiran WFH")
-#     st.markdown("""
-#     | **Stakeholder**     | **Tugas**                                                                                   |
-#     |----------------------|---------------------------------------------------------------------------------------------|
-#     | Pekerja              | - Wajib mengisi kehadiran harian melalui sistem HC sesuai jadwal                           |
-#     | Atasan Langsung      | - Melakukan verifikasi & approval kehadiran                                                |
-#     | HCSP Support         | - Memantau kepatuhan pengisian absensi dan memberikan notifikasi jika ada keterlambatan    |
-#     """)
-
-#     st.markdown("📌 *WFH harus sesuai jadwal resmi dan disetujui oleh atasan.*")
 
 # Halaman SOP Benefit
 elif st.session_state.page == "Benefit":
