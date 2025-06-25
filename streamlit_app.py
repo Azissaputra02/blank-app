@@ -808,6 +808,51 @@ elif st.session_state.page == "HCSP":
         st.markdown("- Surat terbit maksimal **5 hari kerja** setelah semua data lengkap")
         st.markdown("---")
 
+    elif selected_hcsp == "8. Program Retensi Pegawai":
+        st.markdown("#### 1. Proses Identifikasi dan Pengajuan Program Retensi")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                                 |
+        |-----------------|---------------------------------------------------------------------------|
+        | PUK/HC Region   | - Identifikasi pekerja high potential atau high risk turnover             |
+        | PUK             | - Ajukan usulan retensi ke HC Region dan/atau HC Learning                 |
+        | HCSP            | - Terima rekomendasi dan proses benefit retensi sesuai persetujuan        |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Formulir rekomendasi retensi\n- Data kinerja & kontribusi pekerja")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Retensi bisa berupa **promosi, insentif, penyesuaian job grade**, atau **pelatihan khusus**\n- Tidak semua pengajuan disetujui, harus melalui **justifikasi dan review HRBP**")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Review dan approval maksimal **10 hari kerja**")
+
+        st.markdown("---")
+        st.markdown("#### 2. Proses Implementasi Program Retensi")
+        st.markdown("""
+        | **Stakeholder** | **Tugas**                                                                     |
+        |-----------------|--------------------------------------------------------------------------------|
+        | HCSP            | - Lakukan proses administratif (perubahan gaji, job grade, akses pelatihan)   |
+        | HC Region       | - Monitor dampak retensi terhadap keberlanjutan pekerja                       |
+        | Pekerja         | - Tanda tangan dokumen implementasi (jika ada)                                |
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("📌 **Dokumen:**")
+        st.markdown("- Surat penetapan benefit retensi\n- Perubahan kontrak kerja (jika ada)")
+
+        st.markdown("---")
+        st.markdown("⚠️ **Catatan Penting:**")
+        st.markdown("- Seluruh proses **bersifat rahasia** dan hanya diketahui pihak terkait\n- Dampak retensi dimonitor selama **3–6 bulan**")
+
+        st.markdown("---")
+        st.markdown("⏱ **SLA Waktu:**")
+        st.markdown("- Implementasi maksimal **7 hari kerja** sejak persetujuan")
+        st.markdown("---")
+
 # Halaman SOP Benefit
 elif st.session_state.page == "Benefit":
     st.header("🎁 SOP Benefit")
