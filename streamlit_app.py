@@ -984,7 +984,7 @@ elif st.session_state.page == "Benefit":
         "6. E-Registrasi Welcoming Pack & Logam Mulia",
         "7. Pengajuan dan Penghentian Club Membership",
         "8. Penghargaan Masa Kerja Plakat dan Logam Mulia",
-        "9. Pinjaman Pekerja",
+        "9. Pinjaman Pekerja"
     ]
     selected_hcsp = st.selectbox("Pilih topik:", hcsp_options)
 
@@ -999,16 +999,15 @@ elif st.session_state.page == "Payroll":
 
     # Dropdown untuk memilih sub-bab
     hcsp_options = [
-        "1. Preboarding",
-        "2. Onboarding",
-        "3. Identity (ID Card)",
-        "4. Absensi Kehadiran Work From Home",
-        "5. Manajemen Waktu",
-        "6. Perubahan status kepegawaian",
-        "7. Surat Keterangan Kerja",
-        "8. Program Retensi Pegawai",
-        "9. Employee Service Center",
-        "10. Pengakhiran Hubungan Kerja"
+        "1. Administrasi Shift Pekerja",
+        "2. Administrasi Pembayaran Insentif Pekerja",
+        "3. Administrasi Pembayaran Pelaporan SPT",
+        "4. Payroll Outsourcing",
+        "5. Pengaturan Rekening Payroll",
+        "6. Proses Pengajuan Klaim dan Permintaan Barang/Jasa",
+        "7. BPJS Kesehatan",
+        "8. BPJS Ketenagakerjaan",
+        "9. Fasilitas Penugasan Pekerja"
     ]
     selected_hcsp = st.selectbox("Pilih topik:", hcsp_options)
 
