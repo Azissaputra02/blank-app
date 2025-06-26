@@ -1001,6 +1001,9 @@ elif st.session_state.page == "Benefit":
 
 # Halaman SOP Payroll
 elif st.session_state.page == "Payroll":
+    # Tombol kembali ke Home
+    if st.button("Back to Home"):
+        go_to("Home")
     st.header("💸 HC Payroll Quick Reference")
     st.markdown("Panduan ringkas Human Capital Payroll. Pilih topik di bawah ini untuk melihat detailnya.")
 
