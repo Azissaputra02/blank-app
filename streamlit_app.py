@@ -74,9 +74,17 @@ elif st.session_state.page == "HCSP":
     # Tombol kembali ke Home
     st.markdown("### 🔙")
     if st.button("Kembali ke Home"):
-    go_to("Home")
+        go_to("Home")
+
     st.header("📘 HCSP Quick Reference")
     st.markdown("Panduan ringkas Human Capital Service Partner. Pilih topik di bawah ini untuk melihat detailnya.")
+# elif st.session_state.page == "HCSP":
+#     # Tombol kembali ke Home
+#     st.markdown("### 🔙")
+#     if st.button("Kembali ke Home"):
+#     go_to("Home")
+#     st.header("📘 HCSP Quick Reference")
+#     st.markdown("Panduan ringkas Human Capital Service Partner. Pilih topik di bawah ini untuk melihat detailnya.")
 
     # Dropdown untuk memilih sub-bab
     hcsp_options = [
