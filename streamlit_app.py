@@ -71,6 +71,10 @@ if st.session_state.page == "Home":
             go_to("Payroll")
 
 elif st.session_state.page == "HCSP":
+    # Tombol kembali ke Home
+    st.markdown("### 🔙")
+    if st.button("Kembali ke Home"):
+    go_to("Home")
     st.header("📘 HCSP Quick Reference")
     st.markdown("Panduan ringkas Human Capital Service Partner. Pilih topik di bawah ini untuk melihat detailnya.")
 
