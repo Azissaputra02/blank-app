@@ -975,6 +975,9 @@ elif st.session_state.page == "HCSP":
 
 # Halaman SOP Benefit
 elif st.session_state.page == "Benefit":
+    # Tombol kembali ke Home
+    if st.button("Back to Home"):
+        go_to("Home")
     st.header("🎁 HC Benefit Quick Reference")
     st.markdown("Panduan ringkas Human Capital Benefit. Pilih topik di bawah ini untuk melihat detailnya.")
 
